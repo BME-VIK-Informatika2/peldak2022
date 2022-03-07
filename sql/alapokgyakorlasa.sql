@@ -12,3 +12,8 @@ join Termek t
 	on mt.TermekId = t.Id
 group by v.Nev
 order by v.Nev desc;
+
+-- Melyik a legdrágább termék? 
+select *
+from Termek
+order by Ar desc limit 1;
