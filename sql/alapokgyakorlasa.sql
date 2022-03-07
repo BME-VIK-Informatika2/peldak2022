@@ -14,6 +14,16 @@ group by v.Nev
 order by v.Nev desc;
 
 -- Melyik a legdrágább termék? 
+select max(Ar), Nev -- Alam a válasz, de az az első érték és nem a maximum helye...
+from Termek;
+
 select *
 from Termek
-order by Ar desc limit 1;
+where Ar = ( select max(Ar) from Termek );
+
+-- Rendelések (kosarak) összértéke?
+select *
+from termek t
+join megrendelestetel mt
+	on t.id = mt.termekid;
+
