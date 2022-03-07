@@ -22,8 +22,9 @@ from Termek
 where Ar = ( select max(Ar) from Termek );
 
 -- Rendelések (kosarak) összértéke?
-select *
+select sum(t.Ar * mt.db), mt.megrendelesid
 from termek t
 join megrendelestetel mt
-	on t.id = mt.termekid;
+	on t.id = mt.termekid
+group by mt.megrendelesid;
 
