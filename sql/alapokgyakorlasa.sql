@@ -34,3 +34,13 @@ from termek t
 left outer join megrendelestetel mt
 	on t.id = mt.termekid
 group by t.id, t.nev;
+
+-- Mely termékeket rendelték meg a legtöbben?
+select sum(mt.db) as MegrendeltDb, t.nev
+from termek t
+join megrendelestetel mt
+	on t.id = mt.termekid
+group by t.id, t.nev
+order by MegrendeltDb desc;
+
+
