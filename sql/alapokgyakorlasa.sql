@@ -28,3 +28,9 @@ join megrendelestetel mt
 	on t.id = mt.termekid
 group by mt.megrendelesid;
 
+-- Melyik termékből mennyit rendeltek meg összesen?
+select t.id, t.nev, ifnull(sum(mt.db),0) as MegrendeltDb
+from termek t
+left outer join megrendelestetel mt
+	on t.id = mt.termekid
+group by t.id, t.nev;
