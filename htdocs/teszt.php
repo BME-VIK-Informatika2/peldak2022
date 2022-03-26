@@ -3,7 +3,9 @@
 <body>
 <H1>Ez itt még statikus HTML...</H1>
 <?php
-    echo "Hello from PHP!<BR/>\n";
+    for($i=1; $i<10; $i++) {
+        echo "Hello from PHP!<BR/>\n";
+    }
 ?>
 </body>
 </html>
