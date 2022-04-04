@@ -8,7 +8,8 @@
 
 	$mysqli = new mysqli("localhost", "root", "", "demowebshop");
 	if ($mysqli->connect_errno) {
-	    echo "<P/>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+	    echo "<P/>Failed to connect to MySQL: (" .
+			$mysqli->connect_errno . ") " . $mysqli->connect_error;
 	}
 
 	/* change character set to utf8 */
@@ -22,7 +23,8 @@
 	$result = $mysqli->use_result();
 
 	while ($row = $result->fetch_row()) {
-		printf("<TR><TD>%s</TD><TD>%s</TD><TD>%s</TD></TR>\n", $row[0], $row[1], $row[2]);   
+		printf("<TR><TD>%s</TD><TD>%s</TD><TD>%s</TD></TR>\n",
+			$row[0], $row[1], $row[2]);   
 	}
 
     $result->close();

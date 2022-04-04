@@ -32,8 +32,6 @@ else
 	echo "Nem érkezett Vevő ID a GET módszerrel... :(";
 }
 ?>
-
-<A href="http://localhost/VevoLista_TorlesLinkkel.php">Vissza a listához</A>
-
+<BR/><A href="http://localhost/VevoLista_TorlesLinkkel.php">Vissza a listához</A>
 </BODY>
 </HTML>

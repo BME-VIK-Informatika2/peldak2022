@@ -23,8 +23,8 @@
     } 
 ?>
         <form method="GET"> 
-            Name: <input type="text" name="VevoNev" /> <br /> 
-            LieferAddresse: <input type="text" name="VevoCim" /> <br /> 
+            Név: <input type="text" name="VevoNev" /> <br /> 
+            Cím: <input type="text" name="VevoCim" /> <br /> 
             <input type="submit"/> 
         </form>
 
